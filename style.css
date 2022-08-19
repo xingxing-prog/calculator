@@ -1,9 +1,10 @@
-html, body{
+html,body{
     height:100%;
     display:flex;
     justify-content:center;
     align-items:center;
     box-sizing:border-box;
+    
 
 }
 
@@ -13,11 +14,20 @@ html, body{
     box-sizing: inherit;
 }
 
+.calculator{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: absolute;
+    width: 400px;
+    /*background-color: black;*/
+    
+}
+
 .calculator-screen{
     background-color:black;
     color:white;
     width: 100%;
-    height: 70px;
+    height: 80px;
     display:flex;
     align-items:flex-end;
     font-size:36px;
@@ -30,19 +40,21 @@ html, body{
 button{
     height:60px;
     background:#fff;
-    border-radius:5px;
+    border-radius:50%;
     border: 1px solid #c4c4c4;
-    background-color:transparent;
-    font-size:20px;
-    color:#333;
+    background-color:#eee;
+    font-size:24px;
+    box-shadow:0 2px 7px #555;
+   
+   
 }
 
 button:hover{
-    background-color: #eaeaea;
+    background-color: #ccc;
 }
 
 .operator{
-    color: #337cac;
+    color: #000;
 }
 
 .all-clear{
@@ -55,10 +67,23 @@ button:hover{
     background-color: #f17377;
 }
 
+.cancel{
+    background-color:#337cac;
+    color: #fff;
+}
+
+.cancel:hover{
+    background-color: #4e9ed4;
+}
+
 .equal-sign{
     background-color: #2e86c0;
     border-color: #337cac;
     color:#fff;
+    height:100%;
+    grid-column-start:3;
+    grid-column-end:5;
+    
 }
 
 .equal-sign:hover{
@@ -67,8 +92,12 @@ button:hover{
 }
 
 .calculator-keys{
+    background:silver;
     display:grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    padding: 20px;
     
 }
 
