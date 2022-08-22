@@ -71,7 +71,10 @@ function display(){
                     operator = e.target.value;
                 }
                 operator = e.target.value;
-                displayItem += operator;
+                if(number1 !== "")
+                    displayItem += operator;
+                else
+                    displayItem ="0";
             }
             
 
