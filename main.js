@@ -34,6 +34,32 @@ function display(){
                 init();
             }
 
+            else if(e.target.className == "cancel"){
+                if(number !== ""){
+                    number = number.substring(0, number.length-1);
+                   
+                }
+                if(displayItem.length == 1){
+                    displayItem = "0";
+                }
+                else{
+                    displayItem = displayItem.substring(0, displayItem.length-1);
+                }
+                
+            }
+
+            else if(e.target.className == "negative"){
+                if(!number.includes("-")){
+                    number = e.target.value + number;
+                    displayItem = e.target.value + displayItem;
+                }
+                else{
+                    number = number.substring(1);
+                    displayItem = displayItem.substring(1);
+                }
+                 
+            }
+
             else if (e.target.className == "number"){
                 if(input.value === "0"){
                     displayItem = e.target.value;
@@ -43,6 +69,7 @@ function display(){
                 }
               
                 number += e.target.value;
+                
               
             }
 
@@ -83,20 +110,24 @@ function display(){
                     number2 = number;
                     number = "";
                     const result = operate(operator, number1, number2);
-                    
-                    operator ="";
-                    number1 = result;
+
                     displayItem = result;
+                    number = result.toString();
+                    number2 = "";
+                    number1 = "";
+                    operator ="";
+                   
+                    
                 }
                
             }
 
-
-            console.log(e.target);
+        
+            //console.log(e.target);
             //displayItem += e.target.value;
-            console.log(number1);
-            console.log(number2);
-            console.log(operator);
+            //console.log(number1);
+            //console.log(number2);
+            //console.log(operator);
              
             input.value = displayItem;
         })

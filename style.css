@@ -81,8 +81,8 @@ button:hover{
     border-color: #337cac;
     color:#fff;
     height:100%;
-    grid-column-start:3;
-    grid-column-end:5;
+    /*grid-column-start:3;
+    grid-column-end:4;*/
     
 }
 
