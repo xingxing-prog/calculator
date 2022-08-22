@@ -39,23 +39,39 @@ html,body{
 }
 
 button{
-    height:60px;
-   
-    border-radius:50%;
-    border: 1px solid #c4c4c4;
-    background-color:gray;
-    font-size:24px;
-    box-shadow:2px 4px 16px 0px gray;
-   
+    height:55px;
+    color:#fff;
+    border-radius:8px;
+    border: none;
+    background: linear-gradient(25deg, #525a65, #3b424c);
+    font-size:30px;
+    box-shadow:inset 2px -1px 1px 0 rgba(255, 255, 255, .2),
+    inset -3px 2px 5px 0 rgba(0, 0, 0, .2),
+    4px 1px 1px 0 rgba(0, 0, 0, .5),
+    -1px -3px 1px 0 rgba(0, 0, 0, .5),
+    4px -3px 1px 0 rgba(0, 0, 0, .5),
+    -1px -1px 5px 0 rgba(0, 0, 0, .5);
    
 }
+
+button:active {
+    box-shadow: inset 2px -1px 1px 0 rgba(255, 255, 255, .2),
+      inset -3px 2px 5px 0 rgba(0, 0, 0, .2),
+      3px 1px 1px 0 rgba(0, 0, 0, .5),
+      -1px -1px 1px 0 rgba(0, 0, 0, .5),
+      3px -1px 1px 0 rgba(0, 0, 0, .5),
+      -1px -1px 5px 0 rgba(0, 0, 0, .5),
+      4px 0 1px 0 rgba(255, 255, 255, .3);
+    transform: translate(1px, -1px);
+  }
+
 
 button:hover{
     background-color: #ccc;
 }
 
-.operator, number{
-    color: #000;
+.operator, .number{
+    color: #fff;
 }
 
 .all-clear{
